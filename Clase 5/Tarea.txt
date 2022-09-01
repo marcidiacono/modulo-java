@@ -1,0 +1,31 @@
+Country
+User ---> como Country
+	id
+	name
+	lastname
+Incorporar todas las anotaciones para que sea como Country, suponiendo que name y lastname son @NotBlank
+
+Reformular
+UserService
+UserServiceImpl
+	findAll
+	findById
+	search(name, lastname) ---> recordar incorporar un método de 
+				    filtrado en el 
+		     			UserRepository (interface)
+		     			findByName
+		     			findByLastname
+					findByNameLastname	
+	create
+	update
+	delete
+
+Implementar las Excepciones que hemos creado. ElementAlreadyExists... SuchElement... (ver bien el nombre) 
+
+Lógicamente reformular el UserController
+	Agregar el manejo de excepciones local (al estilo Country)
+	Comprobar que cuando se produce una excepción que ya está 
+	contemplada en el manejo global, se vea en Postman.
+
+Todo el proyecto (incluido el pom.xml) estará subido en la carpeta Clase 5 en GitHub. (no voy a subir la parte de usuario, sólo la parte de country y excepciones + archivos de configuración)
+
